@@ -237,11 +237,12 @@ Page({
   onLoad: function (options) {
     const timeVal = wx.getStorageSync('date');
     var countTemp = 0;
-    if(timeVal && util.dateTime(new Date())){
+    const date = util.dateTime(new Date());
+    if(timeVal){
       countTemp = timeVal.count;
     }
     wx.setStorageSync('date', {
-      timestamp: date.getUTCFullYear() + (date.getUTCMonth() + 1) + date.getUTCDay(),
+      timestamp: date,
       count: (countTemp + 1)
     })
 
