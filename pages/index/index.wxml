@@ -3,8 +3,8 @@
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{welcome}}{{userInfo.nickName}}{{ready}}</text>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="../images/witch.jpg" mode="cover"></image>
+      <text class="userinfo-nickname">{{welcome}}{{ready}}</text>
 
     </block>
   </view>
@@ -13,6 +13,5 @@
 
 
 <view class="container">
-<image class="candle" src="../images/witch.jpg" ></image>
 <button size="default" type="primary"  bindtap="bindViewTap"> {{motto}} </button>
 </view>

@@ -1,6 +1,9 @@
 // pages/selectCard/selectCard.js
 //获取应用实例
 var app = getApp()
+
+const util = require("../../utils/util")
+
 var allCard = ['card1',
   'card2',
   'card3',
@@ -111,9 +114,8 @@ startGame: function () {  // 开始游戏
 
 
   onTap: function (event) {
-    var timeVal = wx.getStorageSync('date');
-    var date = new Date();
-    var timeTemp = date.getUTCFullYear() + (date.getUTCMonth() + 1) + date.getUTCDay();
+    const timeVal = wx.getStorageSync('date');
+    var timeTemp = util.dateTime(new Date());
     if(timeVal && timeVal.timestamp == timeTemp && timeVal.count >= 2){
       wx.showToast({
         title: '本日已达上限',

@@ -1,4 +1,7 @@
 // pages/resultPage/resultPage.js
+
+const util = require("../../utils/util")
+
 Page({
 
   /**
@@ -232,10 +235,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var timeVal = wx.getStorageSync('date');
-    var date = new Date();
+    const timeVal = wx.getStorageSync('date');
     var countTemp = 0;
-    if(timeVal){
+    if(timeVal && util.dateTime(new Date())){
       countTemp = timeVal.count;
     }
     wx.setStorageSync('date', {
