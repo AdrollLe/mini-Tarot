@@ -1,0 +1,67 @@
+/* pages/resultPage/resultPage.wxss */
+page{
+  background-color:lavender;
+  color: #546;
+  }
+
+.title{
+  width:  100%;
+  height: 23px;
+  padding:2px;  
+  text-algin:center;
+}
+
+.resultTitle{
+  display: flex;
+}
+
+.resultTitle{
+  width: 100%;
+  flex-direction:column;
+  ustify-content:center;
+  align-items:center;
+}
+
+.resultTitle .item{
+ padding:2px;
+ text-algin:center;
+}
+
+.resultTitle .item:first-child{
+
+}
+
+.resultTitle .item:last-child{
+  color: #546;
+} 
+
+.resultText{
+  display: flex;
+}
+
+.resultText{
+  display: flex;
+  width: 95%;
+  flex-direction:column;
+  ustify-content:center;
+
+}
+
+.resultText .resultItem{
+   margin: 10px;
+}
+
+.demo_line_01{
+    padding: 0 10px 0;
+    margin: 10px 0;
+    line-height: 5px;
+    text-align: center;
+    color:darkred;
+}
+
+.erweima{
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  border-radius: 10%;
+}

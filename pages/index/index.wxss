@@ -1,0 +1,47 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 64px;
+  height: 64px;
+  margin: 15px;
+  border-radius: 25%;
+}
+
+.userinfo-nickname {
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  margin-top: 5px;
+  margin-left:20px;
+  margin-right:20px;
+}
+
+.usermotto {
+  margin-top: 50px;
+  color: whitesmoke;
+}
+
+.biginButton{
+  width: 150rpx;
+  height: 128rpx;
+  margin: 20rpx;
+
+}
+
+.candle{
+  width: 80px;
+  height: 140px;
+  margin: 30px;
+  border-radius: 10%;
+}
+
+page{
+  background-color: black;
+  
+  }

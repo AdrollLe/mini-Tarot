@@ -1,0 +1,50 @@
+<!--pages/resultPage/resultPage.wxml-->
+
+<view class="resultTitle">
+  <text class="item">{{cardName}}</text>
+  <image class="item" mode="aspectFit" src="{{selectedCard}}" display="inline-block"></image>
+</view>
+
+
+
+<view class="resultText">
+  <view class="demo_line_01"></view>
+  <view class="demo_line_01">- ☤ -</view>
+  <view>
+    <text>【四要素】：{{cardElement}}</text>
+  </view>
+  <view>
+    <text>【星相】：{{cardZodiac}}</text>
+  </view>
+  <view class="demo_line_01">- ⚚ -</view>
+  <view class="demo_line_01"></view>
+
+  <view>
+    <text>【关键字】:</text>
+  </view>
+  <view>
+    <text class="resultItem">{{cardKeyword}}</text>
+  </view>
+
+  <view class="demo_line_01"> - ✡︎ -</view>
+  <view class="demo_line_01"></view>
+
+
+  <view>
+    <text>【牌面象征】：</text>
+  </view>
+  <view class="resultItem">
+    <text>{{cardSyble}}</text>
+  </view>
+  <view class="demo_line_01">- ✠ -</view>
+  <view class="demo_line_01"></view>
+  <view>
+    <text>【牌义解析】：</text>
+  </view>
+  <view class="resultItem">
+    <text>{{cardMean}}</text>
+  </view>
+</view>
+
+<view class="demo_line_01"> ----</view>
+
