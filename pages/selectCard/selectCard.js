@@ -116,7 +116,7 @@ startGame: function () {  // 开始游戏
   onTap: function (event) {
     const timeVal = wx.getStorageSync('date');
     var timeTemp = util.dateTime(new Date());
-    if(timeVal && timeVal.timestamp == timeTemp && timeVal.count >= 2){
+    if(timeVal && timeVal.timestamp == timeTemp && timeVal.count > 2){
       wx.showToast({
         title: '本日已达上限',
       });
@@ -158,7 +158,7 @@ startGame: function () {  // 开始游戏
   onLoad: function (options) {
 
     wx.setNavigationBarTitle({
-      title: '心情世界'
+      title: '塔塔罗界'
     });
     this.startGame();
     console.log(this.data.cards);    

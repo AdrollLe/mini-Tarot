@@ -8,7 +8,7 @@ Page({
     motto: '开始冒险',
     userInfo: {},
     hasUserInfo: false,
-    welcome:'陌生人，你已进入了塔罗冒险屋。这里拥有神秘的力量。',
+    welcome:'陌生人，\n你已进入了塔罗冒险屋。这里拥有神秘的力量......\n\n',
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     ready:'准备好开始神秘之旅了吗?',
 

@@ -13,5 +13,6 @@
 
 
 <view class="container">
-<button size="default" type="primary"  bindtap="bindViewTap"> {{motto}} </button>
+<button size="default" type="default"
+bindtap="bindViewTap"> {{motto}} </button>
 </view>

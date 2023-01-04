@@ -6,9 +6,9 @@
 }
 
 .userinfo-avatar {
-  width: 64px;
-  height: 100px;
-  margin: 15px;
+  width: 120px;
+  height: 200px;
+  margin: 25px;
   border-radius: 25%;
 }
 
@@ -43,5 +43,4 @@
 
 page{
   background-color: black;
-  
   }
