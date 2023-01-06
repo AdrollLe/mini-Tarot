@@ -27,6 +27,17 @@
   color: whitesmoke;
 }
 
+.btnImage {
+  width: 30px;
+  height: 30px;
+  
+}
+
+.btnContainer {
+  display: flex;
+  align-items: center;
+}
+
 .biginButton{
   width: 150rpx;
   height: 128rpx;

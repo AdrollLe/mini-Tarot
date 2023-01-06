@@ -75,5 +75,30 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+
+  onAddToFavorites: function(res) {
+    return {
+      title: '塔塔罗界',
+      imageUrl: 'https://m.qpic.cn/psc?/V54GqyFi3LRHLj3NYbwy3c7HR82xCTpF/bqQfVz5yrrGYSXMvKr.cqcxfPOeE94ldDdtLuChov1N5WvRODrxZkL8eVW6IHN89Qv1VZWkDNMIUX6TsDD1EDBsB1TPwdWYR9kyae0.SWOY!/b&bo=hACEAIQAhAABByA!&rf=viewer_4'
+    }
+  },
+  onShareAppMessage: function() {
+    const promise = new Promise(resolve => {
+      setTimeout(() => {
+        resolve({
+          title: '分享该小程序'
+        })
+      }, 2000)
+    })
+    return {
+      title: '塔塔罗界',
+      path: '/index/index',
+      imageUrl: 'https://m.qpic.cn/psc?/V54GqyFi3LRHLj3NYbwy3c7HR82xCTpF/bqQfVz5yrrGYSXMvKr.cqcxfPOeE94ldDdtLuChov1N5WvRODrxZkL8eVW6IHN89Qv1VZWkDNMIUX6TsDD1EDBsB1TPwdWYR9kyae0.SWOY!/b&bo=hACEAIQAhAABByA!&rf=viewer_4',
+      promise 
+    }
+  },
+  onShareTimeline: function() {
+    
   }
 })

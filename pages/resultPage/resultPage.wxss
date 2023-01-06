@@ -53,7 +53,7 @@ page{
 
 .demo_line_01{
     padding: 0 10px 0;
-    margin: 10px 0;
+    margin: 10px 20px;
     line-height: 5px;
     text-align: center;
     color:darkred;

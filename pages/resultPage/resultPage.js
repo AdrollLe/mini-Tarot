@@ -247,17 +247,19 @@ Page({
     })
 
     var selectedCard = wx.getStorageSync('selectedCard');
-    this.setData({ "selectedCard": selectedCard});
-    var cardNumberStart = selectedCard.indexOf('card');
+    var selectedCardNum = wx.getStorageSync('selectedCardNum')
+    this.setData({ "selectedCard": selectedCard}); 
+    var cardNumberStart = selectedCardNum.indexOf('card');
     cardNumberStart = cardNumberStart + 4;
-    var cardNumberEnd = selectedCard.indexOf('.jpg');
-    var cardNumber = selectedCard.substring(cardNumberStart, cardNumberEnd);
+    var cardNumberEnd = selectedCardNum.indexOf('.jpg');
+    var cardNumber = selectedCardNum.substring(cardNumberStart, cardNumberEnd);
     var cardNumberOrig = cardNumber;
     var cardStatus = "正位";
     if (cardNumber > 22){
       cardStatus = "逆位";
       cardNumber = cardNumber - 22;
     }
+
     this.setData({ "cardNumber": cardNumber });
     this.setData({ "cardStatus": cardStatus });
     this.setData({ "cardName": this.data.cardName[cardNumber] });
@@ -310,10 +312,28 @@ Page({
   
   },
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
+  onAddToFavorites: function(res) {
+    return {
+      title: '塔塔罗界',
+      imageUrl: 'https://m.qpic.cn/psc?/V54GqyFi3LRHLj3NYbwy3c7HR82xCTpF/bqQfVz5yrrGYSXMvKr.cqcxfPOeE94ldDdtLuChov1N5WvRODrxZkL8eVW6IHN89Qv1VZWkDNMIUX6TsDD1EDBsB1TPwdWYR9kyae0.SWOY!/b&bo=hACEAIQAhAABByA!&rf=viewer_4'
+    }
+  },
+  onShareAppMessage: function() {
+    const promise = new Promise(resolve => {
+      setTimeout(() => {
+        resolve({
+          title: '分享该小程序'
+        })
+      }, 2000)
+    })
+    return {
+      title: '塔塔罗界',
+      path: '/index/index',
+      imageUrl: 'https://m.qpic.cn/psc?/V54GqyFi3LRHLj3NYbwy3c7HR82xCTpF/bqQfVz5yrrGYSXMvKr.cqcxfPOeE94ldDdtLuChov1N5WvRODrxZkL8eVW6IHN89Qv1VZWkDNMIUX6TsDD1EDBsB1TPwdWYR9kyae0.SWOY!/b&bo=hACEAIQAhAABByA!&rf=viewer_4',
+      promise 
+    }
+  },
+  onShareTimeline: function() {
+    
   }
 })

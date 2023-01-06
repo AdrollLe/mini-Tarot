@@ -27,13 +27,16 @@ background-size: 100% 100%;
      width:  95rpx;
      height: 130rpx;
      padding:0.5rpx;
-     magrin: 1rpx;
 }
 
 page{
   background-color:black;
   }
 
+.titlePic{
+  width: 90px;
+  height: 50px;
+}
 
 .titleTip{
   display: flex;
