@@ -40,27 +40,36 @@ page{
 
 .titleTip{
   display: flex;
-}
-
-.titleTip{
   background-color: black; 
-  width: 100%;
+  width: 95%;
   height: 60px;
   margin-top: 15px;
 }
 
 .titleTip .item{
  padding:2px;
+ color: white;
 }
 
-.titleTip .item:first-child{
-  width: 78rpx;
-  height: 88rpx;
-  margin: 20rpx;
-  border-radius: 10%;
+.infoTip{
+  display: flex;
 }
 
-.titleTip .item:last-child{
-  background-color: black;
-  color: whitesmoke;
-} 
+.selectColor{
+  align-self: flex-end;
+  margin-left: 5px;
+  margin-bottom: 4px;
+  width: 18px;
+  height: 30px;
+  border-radius: 2px;
+}
+
+.selectNum{
+  align-self: flex-end;
+  margin-left: 10px;
+  margin-bottom: 4px;
+  width: 8px;
+  height: 30px;
+  font-size: 20px;
+  color: white;
+}

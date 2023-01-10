@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/selectCard/selectCard",
-    "pages/resultPage/resultPage"
+    "pages/resultPage/resultPage",
+    "pages/colorPage/colorPage",
+    "pages/numberPage/numberPage"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,7 +1,11 @@
 <!--pages/selectCard/selectCard.wxml-->
 <view class="titleTip">
-<image class="titlePic" src="../images/pengiuem.gif" mode="scaleToFill"></image>
-<text class="item">静下心来，心中默念你想要问的问题，然后选择一张塔罗牌</text>
+  <image class="titlePic" src="../images/pengiuem.gif" mode="scaleToFill"></image>
+  <text class="item">静下心来，心中默念你想要问的问题，然后选择一张塔罗牌</text>
+  <view class="infoTip">
+    <view class="selectColor" style="background-color: {{bgColor}};"></view>
+    <text class="selectNum">{{selectNum}}</text>
+  </view>
 </view>
 
 <view>

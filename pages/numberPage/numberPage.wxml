@@ -1,0 +1,44 @@
+<view class="titleTip">
+<image class="titlePic" src="../images/pengiuem.gif" mode="scaleToFill"></image>
+<text class="item">请选择今天的幸运数字</text>
+
+<view class="selectColor" style="background-color: {{bgColor}};"></view>
+</view>
+
+<view class="container">
+  <view class="rows">
+    <view class="numberItem" id="num0" bindtap="onTab">
+      <button class="item">0</button>
+    </view>
+    <view class="numberItem" id="num1" bindtap="onTab">
+      <button class="item">1</button>
+    </view>
+    <view class="numberItem" id="num2" bindtap="onTab">
+      <button class="item">2</button>
+    </view>
+    <view class="numberItem" id="num3" bindtap="onTab">
+      <button class="item">3</button>
+    </view>
+    <view class="numberItem" id="num4" bindtap="onTab">
+      <button class="item">4</button>
+    </view>
+  </view>
+
+  <view class="rows">
+    <view class="numberItem" id="num5" bindtap="onTab">
+      <button class="item">5</button>
+    </view>
+    <view class="numberItem" id="num6" bindtap="onTab">
+      <button class="item">6</button>
+    </view>
+    <view class="numberItem" id="num7" bindtap="onTab">
+      <button class="item">7</button>
+    </view>
+    <view class="numberItem" id="num8" bindtap="onTab">
+      <button class="item">8</button>
+    </view>
+    <view class="numberItem" id="num9" bindtap="onTab">
+      <button class="item">9</button>
+    </view>
+  </view>
+</view>

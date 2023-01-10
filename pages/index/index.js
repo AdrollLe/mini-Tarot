@@ -17,7 +17,7 @@ Page({
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
-      url: '../selectCard/selectCard'
+      url: '../colorPage/colorPage'
     })
   },
   onLoad: function () {

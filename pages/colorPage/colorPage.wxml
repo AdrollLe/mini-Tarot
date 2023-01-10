@@ -1,0 +1,42 @@
+<view class="titleTip">
+<image class="titlePic" src="../images/pengiuem.gif" mode="scaleToFill"></image>
+<text class="item">请选择今天衣服的主色调</text>
+</view>
+
+<view class="container">
+  <view class="rows" >
+    <view class="colorItem" bindtap="onTab" id="red">
+      <button class="redItem"></button>
+    </view>
+    <view class="colorItem" bindtap="onTab" id="white">
+      <button class="whiteItem" ></button>
+    </view>
+    <view class="colorItem" bindtap="onTab" id="pink">
+      <button class="pinkItem" ></button>
+    </view>
+  </view>
+
+  <view class="rows" >
+    <view class="colorItem" bindtap="onTab" id="purple">
+      <button class="purpleItem"></button>
+    </view>
+    <view class="colorItem" bindtap="onTab" id="black">
+      <button class="blackItem" ></button>
+    </view>
+    <view class="colorItem" bindtap="onTab" id="blue">
+      <button class="blueItem" ></button>
+    </view>
+  </view>
+
+  <view class="rows" >
+    <view class="colorItem" bindtap="onTab" id="green">
+      <button class="greenItem"></button>
+    </view>
+    <view class="colorItem" bindtap="onTab" id="orange">
+      <button class="orangeItem" ></button>
+    </view>
+    <view class="colorItem" bindtap="onTab" id="yellow">
+      <button class="yellowItem" ></button>
+    </view>
+  </view>
+</view>

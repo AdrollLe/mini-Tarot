@@ -73,7 +73,6 @@ var allUrl = [
   'https://m.qpic.cn/psc?/V54GqyFi3LRHLj3NYbwy3c7HR82xCTpF/bqQfVz5yrrGYSXMvKr.cqWO2mlIG2aZQkcYSwP*irbFvwhy5rU766T7QgrH5gebd5*mJluAeWA6K*voFrakBbBL0NBbfIUrmzVgI9MfxjhY!/b&bo=6ABlAegAZQEBByA!&rf=viewer_4',
   'https://m.qpic.cn/psc?/V54GqyFi3LRHLj3NYbwy3c7HR82xCTpF/bqQfVz5yrrGYSXMvKr.cqdXvEk6pXokYsmZKdHpAMzpo1WS86ga5xM.gEFrO4m0kqGxF8hNqPqAh3.iPedobs0nZslJUUzohSI7WueOsv5Y!/b&bo=6ABnAegAZwEBByA!&rf=viewer_4',
   'http://m.qpic.cn/psc?/V54GqyFi3LRHLj3NYbwy3c7HR82xCTpF/bqQfVz5yrrGYSXMvKr.cqZnWTb1j8JqRl5KO37m4eQE69SOaMl2sf132PwuFgKui2Ly8fcEXIwHQxn81UUay6RGvX30hf8uvyBYIm2qVKvg!/b&bo=6gBnAeoAZwEBFzA!&rf=viewer_4',
-  'card21',
   'https://m.qpic.cn/psc?/V54GqyFi3LRHLj3NYbwy3c7HR82xCTpF/bqQfVz5yrrGYSXMvKr.cqcz2hjHLZBDFnP66D8tCjkRnmrAr37x8Pa7eeZZ*GdqJvIu3RnXEgTPQxVMlfgt95MQ1YJmV1WTh2JyU9s6p56w!/b&bo=7gBfAe4AXwEBByA!&rf=viewer_4',
   'http://m.qpic.cn/psc?/V54GqyFi3LRHLj3NYbwy3c7HR82xCTpF/bqQfVz5yrrGYSXMvKr.cqR4ZafHOtNMcp5bnnfqUgVFjMJT0kkjYtJS*ErMueM9pCW2XJrcQFJMqqcZShPgIiDBGqmyREYgftZWKPo7Ea4A!/b&bo=5wBiAecAYgEBFzA!&rf=viewer_4',
   'http://m.qpic.cn/psc?/V54GqyFi3LRHLj3NYbwy3c7HR82xCTpF/bqQfVz5yrrGYSXMvKr.cqd33mVCaaM*YQiX2x3DhI8ZLb1gtTMpVAW3GvZ3MCxdq9ekHQQX1jfWMor2j9pNMSzdRuHrKZ3JiL7AHruSeau8!/b&bo=5wBgAecAYAEBFzA!&rf=viewer_4',
@@ -104,6 +103,7 @@ var allUrl = [
   'http://m.qpic.cn/psc?/V54GqyFi3LRHLj3NYbwy3c7HR82xCTpF/bqQfVz5yrrGYSXMvKr.cqYw0Jki.gpvf8QWtjB.URPnXf03TsqbwMibbHCYoVIakRQA15iwWnKGQWTbieUia5WMnw9O5GayFPsS9GM6Ae*8!/b&bo=6gBnAeoAZwEBFzA!&rf=viewer_4',
   'http://m.qpic.cn/psc?/V54GqyFi3LRHLj3NYbwy3c7HR82xCTpF/bqQfVz5yrrGYSXMvKr.cqYgZqKAQoI98L7kBDz*DjFwOLj3EViZ99.cUIMNPsFn6NWAsgE5LG2OZVPIpzP0gTdwCaFHY.cSFRDu352Mf1Qc!/b&bo=6QBkAekAZAEBFzA!&rf=viewer_4',
   'http://m.qpic.cn/psc?/V54GqyFi3LRHLj3NYbwy3c7HR82xCTpF/bqQfVz5yrrGYSXMvKr.cqbQt4fnPDQbPIusXzSMtI7CtxajgIxG9qGGlvwnqMAeRMVfvQtyoMWuvsumwX6rZT82jl9JBO6mTlFJDNm7XajQ!/b&bo=7gBfAe4AXwEBFzA!&rf=viewer_4',
+  'http://m.qpic.cn/psc?/V54GqyFi3LRHLj3NYbwy3c7HR82xCTpF/bqQfVz5yrrGYSXMvKr.cqfBXVocY9czeCY6SXlobmd9pdhzcmiIdeqmwPflmToPm9Utz29VYPx7yqC7RTCaGetGk7LdUFdevC3PtM9Ew3Us!/b&bo=6ABjAegAYwEBFzA!&rf=viewer_4'
 ]
 var backCardImage = "https://m.qpic.cn/psc?/V54GqyFi3LRHLj3NYbwy3c7HR82xCTpF/bqQfVz5yrrGYSXMvKr.cqbKxMPwRdCoPQiY*3NJbS4oN6bAKsVBRA*YqsrbpKKc5Q8i5jAbH2nmx68ueG5KagHVyxhVYQJALWWjeEoMZLk0!/b&bo=OgHaAToB2gEBByA!&rf=viewer_4"
 
@@ -122,9 +122,10 @@ Page({
     firstX: -1,        // 点击的第一张卡牌的坐标 
     firstY: -1,
     cards: [],        // 随机挑选出来的牌   
-    size: 44,        // 界面显示的牌数=size*2
+    size: 49,        // 界面显示的牌数=size*2
     clickable: false,    // 当前是否可点击
-
+    bgColor: '',
+    selectNum: 0
   },
 
 
@@ -162,7 +163,6 @@ startGame: function () {  // 开始游戏
 
     var that = this;
     that.turnAllBack();  // 所有的牌翻到背面
-    console.log('turn all back');
     data.clickable = true; // 可以开始翻牌
    
   },
@@ -175,7 +175,7 @@ startGame: function () {  // 开始游戏
       wx.showToast({
         title: '本日已达上限',
       });
-      return;
+      // return;
     }
     
     var that = this;
@@ -194,7 +194,6 @@ startGame: function () {  // 开始游戏
       that.setData({ cards: data.cards });     // 通过setData让界面变化
       //选中的牌传给下个页面
       wx.setStorageSync("selectedCard", data.cards[ix][iy].src);
-      console.log('11111 ' + data.cards);
       wx.setStorageSync('selectedCardNum', data.cards[ix][iy].num);
       wx.navigateTo({ url: '../resultPage/resultPage' });
     } 
@@ -212,13 +211,15 @@ startGame: function () {  // 开始游戏
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({
+      bgColor: wx.getStorageSync('colorId'),
+      selectNum: wx.getStorageSync('numId').substring(3, 4)
+    })
 
     wx.setNavigationBarTitle({
       title: '塔塔罗界'
     });
     this.startGame();
-    console.log(this.data.cards);    
-    
   },
 
   /**
@@ -233,10 +234,8 @@ startGame: function () {  // 开始游戏
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.data.cardNumber = this.random();
-    console.log("onShow");
+    this.data.cardNumber = Math.random();
     this.startGame();
-    
   },
 
   /**
@@ -290,17 +289,6 @@ startGame: function () {  // 开始游戏
   },
   onShareTimeline: function() {
     
-  },
-
-  /**
-   * 产生随机数
-   */
-  random:function(){
-    var max = 0;
-    var min = 44;
-    var diff = max - min;
-    var number = Math.ceil(Math.random() * diff + min);
-    return number;
   },
 
 result: function () {

@@ -1,0 +1,111 @@
+.rows{
+  margin:10px, 10px, 10px, 10px;
+  width: 100%;
+  text-align:center;
+  flex-direction:row;
+  display:flex;
+}
+
+.titlePic{
+  width: 60px;
+  height: 50px;
+}
+
+.titleTip{
+  display: flex;
+}
+
+.titleTip{
+  background-color: black; 
+  width: 100%;
+  height: 50px;
+  margin-top: 1px;
+}
+
+.titleTip .item{
+ padding:10px;
+ color: white;
+
+}
+
+.colorItem{
+  background-color: darkgrey;
+  height: 94px;
+  width: 100%;
+  margin: 16px;
+  border-radius: 47px;
+}
+
+.blackItem{
+  background-color: black;
+  margin: 4px;
+  height: 86px;
+  border-radius: 43px;
+}
+
+.whiteItem{
+  background-color: white;
+  margin: 4px;
+  height: 86px;
+  border-radius: 43px;
+}
+
+.pinkItem{
+  background-color: pink;
+  margin: 4px;
+  height: 86px;
+  border-radius: 43px;
+}
+
+.greyItem{
+  background-color: grey;
+  margin: 4px;
+  height: 86px;
+  border-radius: 43px;
+}
+
+.yellowItem{
+  background-color: yellow;
+  margin: 4px;
+  height: 86px;
+  border-radius: 43px;
+}
+
+.redItem{
+  background-color: red;
+  margin: 4px;
+  height: 86px;
+  border-radius: 43px;
+}
+
+.greenItem{
+  background-color: green;
+  margin: 4px;
+  height: 86px;
+  border-radius: 43px;
+}
+
+.orangeItem{
+  background-color: orange;
+  margin: 4px;
+  height: 86px;
+  border-radius: 43px;
+}
+
+.blueItem{
+  background-color: blue;
+  margin: 4px;
+  height: 86px;
+  border-radius: 43px;
+}
+
+.purpleItem{
+  background-color: purple;
+  margin: 4px;
+  height: 86px;
+  border-radius: 43px;
+}
+
+page{
+  background-color: black;
+}
