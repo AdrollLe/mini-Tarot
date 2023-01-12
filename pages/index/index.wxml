@@ -16,5 +16,5 @@
 <button class="btnContainer" size="default" type="default"
 bindtap="bindViewTap"> {{motto}}
 <image class="btnImage"
-src="../images/hat.gif"></image> </button>
+src="../images/cardbg.jpg"></image> </button>
 </view>

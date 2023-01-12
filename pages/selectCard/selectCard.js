@@ -125,7 +125,9 @@ Page({
     size: 49,        // 界面显示的牌数=size*2
     clickable: false,    // 当前是否可点击
     bgColor: '',
-    selectNum: 0
+    selectNum: 0,
+    ix0: 0,
+    iy0: 0
   },
 
 
@@ -133,9 +135,8 @@ startGame: function () {  // 开始游戏
     var data = this.data;
     var that = this;
   
-    var tmp = this.data.allCard.sort(
-      function (a, b) { return Math.random() > .5 ? -1 : 1; });// 打乱牌堆
-    var urls = this.data.allUrl.sort(function (a, b) { return Math.random() > .5 ? -1 : 1; });
+    var tmp = this.data.allCard.sort();
+    var urls = this.data.allUrl.sort();
 
     // 添加src,state,转成二维数组方面展示
     var cards = [];
@@ -175,14 +176,22 @@ startGame: function () {  // 开始游戏
       wx.showToast({
         title: '本日已达上限',
       });
-      // return;
+      return;
     }
     
     var that = this;
     var data = this.data;
     var ix = event.currentTarget.dataset.ix; // 获取点击对象的坐标
     var iy = event.currentTarget.dataset.iy;
-    console.log('onTap ' + ix + ' ' + iy);
+
+    var randomNum = (Math.random() * 1000 + Number.parseInt(util.dateTime(new Date())) + this.calculateColor() - wx.getStorageSync('numId').substring(3, 4)) % 7;
+    var randomX = Math.round(this.calculateColor() + randomNum);
+    var randomY = Math.round(wx.getStorageSync('numId').substring(3, 4) + randomNum);
+    this.setData({
+      ix0: Math.round((ix * Math.random() * 10 + randomX) % 7 ), 
+      iy0: Math.round((iy * Math.random() * 10 + randomY) % 7)
+    })
+
     if (data.cards[ix][iy].state != 0 || !data.clickable)  // 点击的不是未翻过来的牌或者现在不让点直接pass
       return;
     that.setData({ clickNum: ++data.clickNum }); //点击数加1   
@@ -193,8 +202,8 @@ startGame: function () {  // 开始游戏
       data.firstX = ix; data.firstY = iy;  // 记下坐标
       that.setData({ cards: data.cards });     // 通过setData让界面变化
       //选中的牌传给下个页面
-      wx.setStorageSync("selectedCard", data.cards[ix][iy].src);
-      wx.setStorageSync('selectedCardNum', data.cards[ix][iy].num);
+      wx.setStorageSync("selectedCard", data.cards[data.ix0][data.iy0].src);
+      wx.setStorageSync('selectedCardNum', data.cards[data.ix0][data.iy0].num);
       wx.navigateTo({ url: '../resultPage/resultPage' });
     } 
   }, 
@@ -234,7 +243,7 @@ startGame: function () {  // 开始游戏
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.data.cardNumber = Math.random();
+    this.data.cardNumber = (this.data.ix0 + 1) * (this.data.iy0 + 1)
     this.startGame();
   },
 
@@ -308,13 +317,27 @@ turn:function(elem){
 return elem.className = cls;
 },
 
-startMSG:function(){
-  wx.showToast({
-    title: '静下心来，心中默念，然后选择一张心情牌',
-    icon: 'loading',
-    duration: 1500
-  })
-
+calculateColor: function(){
+  switch(wx.getStorageSync('colorId')){
+    case 'white':
+      return 0;
+    case 'pink':
+      return 1;
+    case 'yellow':
+      return 2;
+    case 'orange':
+      return 3;
+    case 'green':
+      return 4;
+    case 'purple':
+      return 5;
+    case 'blue':
+      return 6;
+    case 'red':
+      return 7;
+    case 'black':
+      return 8;
+  }
 }
 
 })

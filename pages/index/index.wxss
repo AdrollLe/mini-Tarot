@@ -30,7 +30,8 @@
 .btnImage {
   width: 30px;
   height: 30px;
-  
+  margin-left: 5px;
+  border-radius: 15px;
 }
 
 .btnContainer {
