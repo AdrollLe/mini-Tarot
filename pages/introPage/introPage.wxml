@@ -1,0 +1,1 @@
+<button id="startBtn" class="btnContainer" size="default" type="default" animation='{{attentionanim}}' bindtap="bindViewTap"> {{motto}}</button>

@@ -1,20 +1,14 @@
 <!--index.wxml-->
-<view class="container">
+<view>
   <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="https://m.qpic.cn/psc?/V54GqyFi3LRHLj3NYbwy3c7HR82xCTpF/bqQfVz5yrrGYSXMvKr.cqahO5dfqHEjT013KhFvc6SkNCWMoSIQuDerZYHzYsdk20j49wLHrAQzBUec5dda2wMMYEJQ07t2aIDtym0k7PHM!/b&bo=9AFxA*QBcQMBByA!&rf=viewer_4" mode="cover"></image>
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="http://m.qpic.cn/psc?/V54GqyFi3LRHLj3NYbwy3c7HR82xCTpF/bqQfVz5yrrGYSXMvKr.cqdjmxg*eLD2SFhLYBOTVU221VxzCSP5UAzGyfOEYimrrPwg1ChM4tEBxM2HtQeRlN1XSJQAXzCDgAHZOrqnXVZY!/b&bo=9AFxAwAAAAADJ4U!&rf=viewer_4" mode="cover"></image>
       <text class="userinfo-nickname">{{welcome}}{{ready}}</text>
-
-    </block>
   </view>
 
-</view>
+  <button id="startBtn" class="btnContainer" size="default" type="default" animation='{{attentionanim}}' bindtap="bindViewTap"> {{motto}}</button>
 
-
-<view class="container">
-<button class="btnContainer" size="default" type="default"
-bindtap="bindViewTap"> {{motto}}
-<image class="btnImage"
-src="../images/cardbg.jpg"></image> </button>
+  <view style="flex-direction: row;">
+    <button id="doubleBall" size="default" type="default">{{leftMotto}}</button>
+    <button id="happyTime" size="default" type="default">{{rightMotto}}</button>
+  </view>
 </view>

@@ -1,0 +1,10 @@
+page{
+  background-image: url('http://a1.qpic.cn/psc?/V54GqyFi3LRHLj3NYbwy3c7HR82xCTpF/bqQfVz5yrrGYSXMvKr.cqUy.cAl*kO01*Q82yklBwcwEW3PBiOAkAF2hYkO2U.wtTWBHnBOIIto*rPNFnj2mR6zu7zincBsnCBDaHbZGlMk!/c&ek=1&kp=1&pt=0&bo=7gKzAwAAAAABF2w!&tl=3&vuin=545087068&tm=1673593200&dis_t=1673596086&dis_k=f7bd7a87846b2cbb046bf4d1bd831874&sce=60-2-2&rf=viewer_4');
+  background-size: 100% 86%;
+  }
+
+  .btnContainer {
+    align-items: center;
+    margin-top: 60px;
+    width: 100px;
+  }

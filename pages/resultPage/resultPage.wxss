@@ -1,7 +1,6 @@
 /* pages/resultPage/resultPage.wxss */
 page{
-  background-color:lavender;
-  color: #546;
+  background-color: lightcoral;
   }
 
 .title{
@@ -13,6 +12,7 @@ page{
 
 .resultTitle{
   display: flex;
+  color: white;
 }
 
 .resultTitle{
@@ -25,6 +25,7 @@ page{
 .resultTitle .item{
  padding:2px;
  text-algin:center;
+ color: white;
 }
 
 .resultTitle .item:first-child{
@@ -32,11 +33,12 @@ page{
 }
 
 .resultTitle .item:last-child{
-  color: #546;
+  color: white;
 } 
 
 .resultText{
   display: flex;
+  color: white;
 }
 
 .resultText{
@@ -44,7 +46,7 @@ page{
   width: 95%;
   flex-direction:column;
   ustify-content:center;
-
+  color: white;
 }
 
 .resultText .resultItem{
@@ -56,7 +58,7 @@ page{
     margin: 10px 20px;
     line-height: 5px;
     text-align: center;
-    color:darkred;
+    color:white;
 }
 
 .erweima{

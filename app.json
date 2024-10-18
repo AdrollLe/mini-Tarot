@@ -5,7 +5,8 @@
     "pages/selectCard/selectCard",
     "pages/resultPage/resultPage",
     "pages/colorPage/colorPage",
-    "pages/numberPage/numberPage"
+    "pages/numberPage/numberPage",
+    "pages/introPage/introPage"
   ],
   "window": {
     "backgroundTextStyle": "light",

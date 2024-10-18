@@ -127,7 +127,8 @@ Page({
     bgColor: '',
     selectNum: 0,
     ix0: 0,
-    iy0: 0
+    iy0: 0,
+    share: false
   },
 
 
@@ -172,10 +173,26 @@ startGame: function () {  // 开始游戏
   onTap: function (event) {
     const timeVal = wx.getStorageSync('date');
     var timeTemp = util.dateTime(new Date());
-    if(timeVal && timeVal.timestamp == timeTemp && timeVal.count > 2){
+    console.log('count', timeVal)
+    if(timeVal && timeVal.timestamp == timeTemp && timeVal.count >= 1 && this.data.share){
       wx.showToast({
         title: '本日已达上限',
       });
+      return;
+    }else if(timeVal && timeVal.timestamp == timeTemp && timeVal.count == 1 && !this.data.share){
+      wx.showModal({
+        title: '翻牌次数+1',
+        content: '点击右上角分享到朋友圈',
+        success: (res) => {
+          if(res.confirm){
+            wx.showShareMenu({
+              withShareTicket: true,
+              menus: ['shareAppMessage', 'shareTimeline'],
+            })
+          }
+        }
+      });
+
       return;
     }
     
@@ -202,6 +219,14 @@ startGame: function () {  // 开始游戏
       data.firstX = ix; data.firstY = iy;  // 记下坐标
       that.setData({ cards: data.cards });     // 通过setData让界面变化
       //选中的牌传给下个页面
+      console.log('onTab', data.ix0, data.iy0);
+
+      // fixme
+      if(data.ix0 == NaN || data.iy0 == NaN){
+        data.ix0 = 5;
+        data.iy0 = 5;
+      }
+
       wx.setStorageSync("selectedCard", data.cards[data.ix0][data.iy0].src);
       wx.setStorageSync('selectedCardNum', data.cards[data.ix0][data.iy0].num);
       wx.navigateTo({ url: '../resultPage/resultPage' });
@@ -285,19 +310,24 @@ startGame: function () {  // 开始游戏
     const promise = new Promise(resolve => {
       setTimeout(() => {
         resolve({
-          title: '分享该小程序'
+          title: '塔塔罗界，一个塔罗牌预测运气的世界'
         })
       }, 2000)
     })
     return {
-      title: '塔塔罗界',
+      title: '塔塔罗界，一个塔罗牌预测运气的世界',
       path: '/index/index',
       imageUrl: 'https://m.qpic.cn/psc?/V54GqyFi3LRHLj3NYbwy3c7HR82xCTpF/bqQfVz5yrrGYSXMvKr.cqcxfPOeE94ldDdtLuChov1N5WvRODrxZkL8eVW6IHN89Qv1VZWkDNMIUX6TsDD1EDBsB1TPwdWYR9kyae0.SWOY!/b&bo=hACEAIQAhAABByA!&rf=viewer_4',
       promise 
     }
   },
+
   onShareTimeline: function() {
-    
+    const timeVal = wx.getStorageSync('date');
+    timeVal.count = timeVal.count - 1;
+    wx.setStorageSync('date', timeVal);
+    this.data.share = true;
+    console.log('onShareTimeline');
   },
 
 result: function () {

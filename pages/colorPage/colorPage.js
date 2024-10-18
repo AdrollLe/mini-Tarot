@@ -1,4 +1,7 @@
 // pages/colorPage/colorPage.js
+
+const util = require("../../utils/util")
+
 Page({
 
   /**

@@ -13,7 +13,6 @@
 
 .titleTip{
   display: flex;
-  background-color: black; 
   width: 100%;
   height: 50px;
   margin-top: 1px;
@@ -21,7 +20,6 @@
 
 .titleTip .item{
  padding:10px;
- color: white;
 }
 
 .rows{
@@ -52,5 +50,6 @@
 }
 
 page{
-  background-color: black;
-}
+  background-image: url('https://m.qpic.cn/psc?/V54GqyFi3LRHLj3NYbwy3c7HR82xCTpF/bqQfVz5yrrGYSXMvKr.cqR2FpyKIf0aFifJYdNq03LzwE9XudAqP06ryjzGE.XaoMvIERN39aKXXhZ.8.ZQm19GLst32CJcpS6ldDHkU8ts!/b&bo=aAGAAgAAAAABB8s!&rf=viewer_4');
+  background-size: 100% 100%;
+  }
